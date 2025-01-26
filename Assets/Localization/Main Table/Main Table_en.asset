@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Main Table_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 85c6683ce801ee4428fc2843c977e6ee, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 35483236782080
+    m_Localized: Clean the room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35441088221184
+    m_Localized: Feed the dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35411371577344
+    m_Localized: Wash the floor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35377439657984
+    m_Localized: Water the flowers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130752794624
+    m_Localized: Collect all the clothes in the room in a basket on the bed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106862039040
+    m_Localized: 'Mom: I''m leaving for 15 minutes, you must have time to clean the
+      room, wash the floor, feed the dog and water the flowers. And if you don''t...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60527562752
+    m_Localized: I need to get everything done! I will start by cleaning the room...
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
