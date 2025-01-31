@@ -1,20 +1,25 @@
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class QuestHandler : MonoBehaviour
 {
     private List<Transform> quests = new();
-    private int finishedQuests;
+    private List<int> finishedQuests = new();
+    public int maxQuests;
 
     public Sprite checkmarkSprite;
 
     [Space]
     public Transform player;
     public AudioClip endMusic;
+    public UnityEvent onCleanEnding;
 
     private void Awake()
-    { 
+    {
+        PlayerPrefs.DeleteAll();
         for (int i = 0; i < transform.childCount; i++)
         {
             quests.Add(transform.GetChild(i));
@@ -29,10 +34,11 @@ public class QuestHandler : MonoBehaviour
     public void QuestFinished(int index)
     {
         quests[index].GetChild(1).GetComponent<Image>().sprite = checkmarkSprite;
-        finishedQuests++;
-        if (finishedQuests == 4)
+        finishedQuests.Add(index);
+        if (finishedQuests.Count == maxQuests)
         {
-            GameEnding();
+            PlayerPrefs.SetString("Passed levels", finishedQuests.ToString());
+            onCleanEnding?.Invoke();
         }
     }
 

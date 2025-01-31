@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Events;
 using UnityEngine.Localization;
+using UnityEngine.SceneManagement;
 
 // Этот класс контролирует стартовую катсцену с мамой, открытие двери после уборки комнаты, канвас "UI" и таймер
 public class CutsceneController : MonoBehaviour
@@ -11,6 +12,7 @@ public class CutsceneController : MonoBehaviour
     private int timer = 900; // 15 минут в секундах
     private AudioSource audioSource;
 
+    public GameObject momPrefab;
     public Animator momAnimator;
     public Transform door, locomotion;
     public TextMeshProUGUI counter, subtitle;
@@ -49,8 +51,8 @@ public class CutsceneController : MonoBehaviour
         subtitle.text = localizedStrings[1].GetLocalizedString();
         yield return new WaitForSeconds(3f);
 
-        onGameStart?.Invoke();
         subtitle.text = localizedStrings[2].GetLocalizedString();
+        onGameStart?.Invoke();
         for (int i = 0; i < locomotion.childCount; i++)
         {
             locomotion.GetChild(i).gameObject.SetActive(true);
@@ -86,5 +88,24 @@ public class CutsceneController : MonoBehaviour
         DOTween.Sequence()
             .Append(door.DORotate(new Vector3(0f, 135f, 0f), 1f))
             .Join(door.DOMove(new Vector3(-2.6f, 0f, -7.9f), 1f));
+    }
+
+    public void CleanEnd()
+    {
+        StartCoroutine(CleanEnding());
+    }
+
+    IEnumerator CleanEnding()
+    {
+        Instantiate(momPrefab, new Vector3(2.5f, 0f, 2.2f), Quaternion.Euler(0f, -90f, 0f));
+        locomotion.parent.position = new Vector3(-1f, 0f, 1.5f);
+        for (int i = 0; i < locomotion.childCount; i++)
+        {
+            locomotion.GetChild(i).gameObject.SetActive(false);
+        }
+
+        subtitle.text = localizedStrings[3].GetLocalizedString();
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Shop");
     }
 }

@@ -27,6 +27,10 @@ MonoBehaviour:
     m_Key: DO_CLEAN
     m_Metadata:
       m_Items: []
+  - m_Id: 1742515860340736
+    m_Key: GOOD_JOB
+    m_Metadata:
+      m_Items: []
   - m_Id: 35377439657984
     m_Key: BasicScene/TV UI/Quests/Quests Controller/Quest (3)/Quest Name
     m_Metadata:
@@ -41,6 +45,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 35483236782080
     m_Key: BasicScene/TV UI/Quests/Quests Controller/Quest/Quest Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1771540339163136
+    m_Key: Shop/Canvas/List/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1773768202452992
+    m_Key: Shop/Canvas/Subtitle
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -47,6 +47,18 @@ MonoBehaviour:
     m_Localized: I need to get everything done! I will start by cleaning the room...
     m_Metadata:
       m_Items: []
+  - m_Id: 1742515860340736
+    m_Localized: Well done, son! Now run to the store, here's the list!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1771540339163136
+    m_Localized: "I need to buy:\r\nEggs\r\nMilk\r\nBread\r\nJam \r\nChocolate"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1773768202452992
+    m_Localized: Sorry!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
