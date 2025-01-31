@@ -1,27 +1,35 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class ItemController : MonoBehaviour
 {
     public static InventoryController inventoryController;
-    public static SellsController sellsController;
+    public static BuyHandler buyHandler;
 
     public FoodObject scriptable;
-    public UnityEvent<FoodObject> onItemBought;
 
     public void Init(FoodObject food)
     {
         scriptable = food;
     }
 
+    public void Taked()
+    {
+        transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>(true).text = scriptable.price.ToString();
+    }
+
+    public void Released()
+    {
+        transform.GetChild(0).gameObject.SetActive(false);
+    }
+
     public void TakeItem()
     {
-        if (inventoryController.cash < scriptable.price || inventoryController.invContent.Count == inventoryController.slots.Count) return;
-
-        onItemBought.AddListener((FoodObject) => sellsController.ItemBought(scriptable));
-        onItemBought?.Invoke(scriptable);
-        inventoryController.AddItem(scriptable);
-        Destroy(gameObject);
-
+        if (inventoryController.AddItem(scriptable))
+        {
+            Destroy(gameObject);
+        }
     }
 }

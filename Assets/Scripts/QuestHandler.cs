@@ -53,11 +53,18 @@ public class QuestHandler : MonoBehaviour
         }
     }
 
-    public void GameEnding()
+    public void GameLose()
     {
         transform.parent.parent.position = new Vector3(-1f, 2f, 15.47f);
         transform.parent.parent.localScale = transform.parent.parent.localScale * 2f;
         player.position = new Vector3(-1f, 0f, 19f);
+        GetComponent<AudioSource>().clip = endMusic;
+        GetComponent<AudioSource>().Play();
+    }
+
+    public void GameWin()
+    {
+        player.position = new Vector3(-23.5f, 0f, 4f);
         GetComponent<AudioSource>().clip = endMusic;
         GetComponent<AudioSource>().Play();
     }

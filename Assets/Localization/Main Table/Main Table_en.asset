@@ -52,8 +52,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1771540339163136
-    m_Localized: "I need to buy:\r\nEggs (150)\r \nMilk (100)\r\nBread (100)\r\nJam
-      (150)\r\nChocolate (250)"
+    m_Localized: "I need to buy:\r\nEggs \r \nMilk \r\nBread \r\nJam \r\nChocolate "
     m_Metadata:
       m_Items: []
   - m_Id: 1773768202452992

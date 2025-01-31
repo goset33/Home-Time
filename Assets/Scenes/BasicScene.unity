@@ -13610,6 +13610,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6dacfa06e24bc0f4a80b1e86ee8f2a81, type: 3}
   - {fileID: 8300000, guid: 7117e6bf18139b0458d01747e0ae1332, type: 3}
   - {fileID: 8300000, guid: 01eaa80de5d019e4ebf8f9fb1246b67c, type: 3}
+  - {fileID: 8300000, guid: 61a948738cf15d04a951fde3f4080a55, type: 3}
   localizedStrings:
   - m_TableReference:
       m_TableCollectionName: GUID:85c6683ce801ee4428fc2843c977e6ee

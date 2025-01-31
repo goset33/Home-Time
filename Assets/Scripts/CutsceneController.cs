@@ -105,7 +105,8 @@ public class CutsceneController : MonoBehaviour
         }
 
         subtitle.text = localizedStrings[3].GetLocalizedString();
-        yield return new WaitForSeconds(3f);
+        audioSource.PlayOneShot(sounds[4], 0.7f);
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene("Shop");
     }
 }

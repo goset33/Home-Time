@@ -2,48 +2,54 @@ using DG.Tweening;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Localization;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class InventoryController : MonoBehaviour
 {
+    public static BuyHandler buyHandler;
+
     public TextMeshProUGUI cashText, subtitles;
     public Transform inventory;
     public int cash;
 
-    [HideInInspector] public List<Image> slots = new();
-    [HideInInspector] public List<FoodObject> invContent = new();
-    private int lastBlocked = 0;
+    private List<Image> slots = new();
+    public List<FoodObject> invContent = new(6);
 
     private void Awake()
     {
-        cashText.text = cash.ToString();
         ItemController.inventoryController = this;
+        BuyHandler.inventoryController = this;
+
+        cashText.text = cash.ToString();
         for (int i = 0; i < inventory.childCount; i++)
         {
             slots.Add(inventory.GetChild(i).GetComponent<Image>());
         }
     }
 
-    public void AddItem(FoodObject obj)
+    public bool AddItem(FoodObject food)
     {
-        slots[lastBlocked].sprite = obj.sprite;
-        slots[lastBlocked].color = Color.white;
-        invContent.Add(obj);
-
-        cash -= obj.price;
-        cashText.text = cash.ToString();
-        lastBlocked++;
-
-        if (invContent.Count == slots.Count)
+        for (int i = 0; i < invContent.Count; i++)
         {
-            GameEnding();
+            if (invContent[i] == null)
+            {
+                invContent[i] = food;
+                slots[i].sprite = food.sprite;
+                slots[i].color = Color.white;
+                buyHandler.ItemAdded(food);
+                return true;
+            }
         }
+        return false;
     }
 
-    public void GameEnding()
+    public void DeleteItem(FoodObject food)
     {
-
+        int index = invContent.FindIndex((FoodObject) => food);
+        slots[index].sprite = null;
+        slots[index].color = new Color(1f, 1f, 1f, 0f);
+        invContent[index] = null;
     }
 
     public void TypeSorry()

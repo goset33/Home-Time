@@ -5,5 +5,6 @@ public class FoodObject : ScriptableObject
 {
     public GameObject prefab;
     public Sprite sprite;
+    public string ruName;
     public int price;
 }

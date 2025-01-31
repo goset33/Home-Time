@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -7,33 +9,19 @@ public class SellsController : MonoBehaviour
 {
     public Sprite checkmarkSprite;
 
-    public List<FoodObject> reqiredFood = new List<FoodObject>();
-    private List<Transform> foods = new();
-
-    public UnityEvent onAllBought;
+    private List<Transform> foodsText = new();
 
     private void Awake()
     {
-        ItemController.sellsController = this;
+        BuyHandler.sellsController = this;
         for (int i = 0; i < transform.childCount; i++)
         {
-            foods.Add(transform.GetChild(i));
+            foodsText.Add(transform.GetChild(i));
         }
     }
 
-    public void ItemBought(FoodObject food)
+    public void ItemBought(int index)
     {
-        if (reqiredFood.Contains(food))
-        {
-            int index = reqiredFood.IndexOf(food);
-            foods[index].GetChild(1).GetComponent<Image>().sprite = checkmarkSprite;
-            reqiredFood.Remove(food);
-
-            if (reqiredFood.Count == 0)
-            {
-                onAllBought?.Invoke();
-            }
-        }
+        foodsText[index].GetChild(1).GetComponent<Image>().sprite = checkmarkSprite;
     }
-
 }

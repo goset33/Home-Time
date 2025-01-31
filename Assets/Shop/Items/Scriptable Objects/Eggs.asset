@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 9013457667186008492, guid: f3c72555973d0894a8b47a6aab205358, type: 3}
   sprite: {fileID: 21300000, guid: 09797c328666a8c459b9672643c5464b, type: 3}
+  ruName: "\u042F\u0439\u0446\u0430"
   price: 150
