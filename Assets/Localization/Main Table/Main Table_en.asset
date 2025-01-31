@@ -52,11 +52,32 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1771540339163136
-    m_Localized: "I need to buy:\r\nEggs\r\nMilk\r\nBread\r\nJam \r\nChocolate"
+    m_Localized: "I need to buy:\r\nEggs (150)\r \nMilk (100)\r\nBread (100)\r\nJam
+      (150)\r\nChocolate (250)"
     m_Metadata:
       m_Items: []
   - m_Id: 1773768202452992
     m_Localized: Sorry!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1784670490394624
+    m_Localized: Dozen of eggs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1784930163949568
+    m_Localized: Chocolate bar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1784969686876160
+    m_Localized: Jar of jam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1785191573946368
+    m_Localized: Loaf of bread
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1785237509963776
+    m_Localized: Tetrapack of milk
     m_Metadata:
       m_Items: []
   references:

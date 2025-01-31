@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,6 +11,8 @@ public class QuestHandler : MonoBehaviour
     private List<int> finishedQuests = new();
     public int maxQuests;
 
+    public bool isInShop;
+
     public Sprite checkmarkSprite;
 
     [Space]
@@ -19,11 +22,19 @@ public class QuestHandler : MonoBehaviour
 
     private void Awake()
     {
-        PlayerPrefs.DeleteAll();
         for (int i = 0; i < transform.childCount; i++)
         {
             quests.Add(transform.GetChild(i));
         }
+
+        if (isInShop)
+        {
+            for (int i = 0; i < quests.Count;  i++)
+            {
+                quests[i].GetChild(1).GetComponent<Image>().sprite = checkmarkSprite;
+            }
+        }
+        else PlayerPrefs.DeleteAll();
     }
 
     public void StartMusic()
@@ -35,9 +46,9 @@ public class QuestHandler : MonoBehaviour
     {
         quests[index].GetChild(1).GetComponent<Image>().sprite = checkmarkSprite;
         finishedQuests.Add(index);
+        PlayerPrefs.SetInt($"Task{index}", 1);
         if (finishedQuests.Count == maxQuests)
         {
-            PlayerPrefs.SetString("Passed levels", finishedQuests.ToString());
             onCleanEnding?.Invoke();
         }
     }

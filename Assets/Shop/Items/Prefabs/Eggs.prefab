@@ -103,6 +103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptable: {fileID: 11400000, guid: a5798b550742ec049b1025bfc463ee4e, type: 2}
+  onItemBought:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &4080483447846293436
 BoxCollider:
   m_ObjectHideFlags: 0

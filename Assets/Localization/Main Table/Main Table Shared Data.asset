@@ -55,6 +55,26 @@ MonoBehaviour:
     m_Key: Shop/Canvas/Subtitle
     m_Metadata:
       m_Items: []
+  - m_Id: 1784670490394624
+    m_Key: Shop/Ending/Canvas/Sells/SellsController/Quest/Quest Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1784930163949568
+    m_Key: Shop/Ending/Canvas/Sells/SellsController/Quest (4)/Quest Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1784969686876160
+    m_Key: Shop/Ending/Canvas/Sells/SellsController/Quest (3)/Quest Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1785191573946368
+    m_Key: Shop/Ending/Canvas/Sells/SellsController/Quest (2)/Quest Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1785237509963776
+    m_Key: Shop/Ending/Canvas/Sells/SellsController/Quest (1)/Quest Name
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
