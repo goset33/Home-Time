@@ -25,15 +25,15 @@ public class BuyHandler : MonoBehaviour
         InventoryController.buyHandler = this;
     }
 
-    public void ItemAdded(FoodObject food)
+    public void UpdateFood(List<FoodObject> foods)
     {
-        for (int i = 0; i < boughtFood.Count; i++)
+        for (int i = 0; i < foods.Count; i++)
         {
-            if (boughtFood[i] == null)
+            if (foods[i] != boughtFood[i])
             {
-                boughtFood[i] = food;
-                AddInUI(food, i);
-                sellsController.ItemBought(reqiredFood.IndexOf(food));
+                boughtFood[i] = foods[i];
+                AddInUI(foods[i], i);
+                sellsController.ItemBought(reqiredFood.IndexOf(foods[i]));
                 break;
             }
         }
@@ -46,7 +46,8 @@ public class BuyHandler : MonoBehaviour
         newCard.GetComponentInChildren<TextMeshProUGUI>().text = $"{food.ruName} - {food.price}";
         allPrice += food.price;
         allPriceText.text = $"Цена:\n{allPrice}";
-        newCard.GetComponentInChildren<Button>().onClick.AddListener(() => RemoveSomething(food));
+        FoodObject food1 = new List<FoodObject>() { food }[0];
+        newCard.GetComponentInChildren<Button>().onClick.AddListener(() => RemoveSomething(food1));
     }
 
     public void RemoveSomething(FoodObject food)
