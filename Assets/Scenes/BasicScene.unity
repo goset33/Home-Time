@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &140424220
 Canvas:
   m_ObjectHideFlags: 0
@@ -1204,7 +1204,7 @@ Canvas:
   m_GameObject: {fileID: 140424217}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 801057347}
   m_PlaneDistance: 0.1
   m_PixelPerfect: 1
@@ -1225,20 +1225,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140424217}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.099999994}
+  m_LocalScale: {x: 0.000106916734, y: 0.00010691671, z: 0.000106916734}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1268741482}
   - {fileID: 771442616}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 3378519471873526929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920.0001, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &145074864 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4133703932355585839, guid: 402f7b92b66a5394e9c936fc6d213d46, type: 3}
@@ -17750,9 +17750,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6582403483597279033, guid: c4d33f7c726c0b944802bacb85037365, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 140424221}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d33f7c726c0b944802bacb85037365, type: 3}
+--- !u!4 &3378519471873526929 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6582403483597279033, guid: c4d33f7c726c0b944802bacb85037365, type: 3}
+  m_PrefabInstance: {fileID: 3378519471873526928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4149269000861616528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18166,7 +18174,6 @@ SceneRoots:
   - {fileID: 1775891398}
   - {fileID: 1825620500}
   - {fileID: 393830359222497881}
-  - {fileID: 140424221}
   - {fileID: 1153754037}
   - {fileID: 1752781734}
   - {fileID: 556785619}

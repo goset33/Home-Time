@@ -23,6 +23,7 @@ public class BuyHandler : MonoBehaviour
     {
         ItemController.buyHandler = this;
         InventoryController.buyHandler = this;
+        ShopCard.buyHandler = this;
     }
 
     public void UpdateFood(List<FoodObject> foods)
@@ -44,15 +45,14 @@ public class BuyHandler : MonoBehaviour
         GameObject newCard = Instantiate(buyCardPrefab, content.transform);
         newCard.transform.SetSiblingIndex(index);
         newCard.GetComponentInChildren<TextMeshProUGUI>().text = $"{food.ruName} - {food.price}";
+        newCard.GetComponent<ShopCard>().scriptableInstance = food;
         allPrice += food.price;
         allPriceText.text = $"Цена:\n{allPrice}";
-        FoodObject food1 = new List<FoodObject>() { food }[0];
-        newCard.GetComponentInChildren<Button>().onClick.AddListener(() => RemoveSomething(food1));
     }
 
     public void RemoveSomething(FoodObject food)
     {
-        int index = boughtFood.FindIndex((FoodObject) => food);
+        int index = boughtFood.IndexOf(food);
         Destroy(content.transform.GetChild(index).gameObject);
         boughtFood[index] = null;
         allPrice -= food.price;

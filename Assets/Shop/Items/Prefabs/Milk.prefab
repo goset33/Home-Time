@@ -454,9 +454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptable: {fileID: 11400000, guid: 584be80e38666304397b12b05120a168, type: 2}
-  onItemBought:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &7268640462641878562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -615,7 +612,7 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AttachTransform: {fileID: 7968574631779128896}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1

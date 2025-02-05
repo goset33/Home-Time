@@ -952,8 +952,8 @@ MonoBehaviour:
     - line: '|   editorAssembliesCompatibilityLevel: 1'
     - line: '|   m_RenderingPath: 1'
     - line: '|   m_MobileRenderingPath: 1'
-    - line: '|   metroPackageName: Home Time'
-    - line: '|   metroPackageVersion: '
+    - line: '|   metroPackageName: HomeTime'
+    - line: '|   metroPackageVersion: 1.0.0.0'
     - line: '|   metroCertificatePath: '
     - line: '|   metroCertificatePassword: '
     - line: '|   metroCertificateSubject: '
@@ -961,7 +961,7 @@ MonoBehaviour:
     - line: '|   metroCertificateNotAfter: 0000000000000000'
     - line: '|   metroApplicationDescription: Home Time'
     - line: '|   wsaImages: {}'
-    - line: '|   metroTileShortName: '
+    - line: '|   metroTileShortName: Home Time'
     - line: '|   metroTileShowName: 0'
     - line: '|   metroMediumTileShowName: 0'
     - line: '|   metroLargeTileShowName: 0'
@@ -1053,10 +1053,10 @@ MonoBehaviour:
     - rid: 6884558438562004992
       type: {class: WindowsPlatformSettings, ns: UnityEditor.WindowsStandalone, asm: UnityEditor.WindowsStandalone.Extensions}
       data:
-        m_Development: 0
-        m_ConnectProfiler: 0
-        m_BuildWithDeepProfilingSupport: 0
-        m_AllowDebugging: 0
+        m_Development: 1
+        m_ConnectProfiler: 1
+        m_BuildWithDeepProfilingSupport: 1
+        m_AllowDebugging: 1
         m_WaitForManagedDebugger: 0
         m_ManagedDebuggerFixedPort: 0
         m_ExplicitNullChecks: 0

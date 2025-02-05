@@ -45,7 +45,7 @@ public class InventoryController : MonoBehaviour
 
     public void DeleteItem(FoodObject food)
     {
-        int index = invContent.FindIndex((FoodObject) => food);
+        int index = invContent.IndexOf(food);
         slots[index].sprite = null;
         slots[index].color = new Color(1f, 1f, 1f, 0f);
         invContent[index] = null;

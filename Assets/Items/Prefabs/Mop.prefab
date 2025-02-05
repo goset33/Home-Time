@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bcbadd2b0973149aab52446d0d4bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWet: 0
   states:
   - {fileID: 2800000, guid: 2ccbd71d92ec720419f398067c1597ee, type: 3}
   - {fileID: 2800000, guid: eb4c003289742ac4380a3d204ed1cb86, type: 3}
